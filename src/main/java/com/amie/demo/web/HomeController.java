@@ -10,9 +10,11 @@ import com.amie.demo.domain.User;
 @Controller
 public class HomeController {
 	
+	// root URL that renders in the index.html
+	// sends along User model with an empty object - key for the model is "formData" User object
 	@RequestMapping("/")
 	public String home(Model model) {
-		// formData key access in User object
+		// formData key that contains the user info in User object
 		model.addAttribute("formData", new User());
 		return "index";
 	}
@@ -23,6 +25,8 @@ public class HomeController {
 	public String submitForm(User user) {
 		// after form is submitted it redirects to dataResult.html in templates
 		return "dataResult";
+		// URL: http://localhost:8080/create
+		// webpage: will display the dataResult.html data
 	}
 	
 	
