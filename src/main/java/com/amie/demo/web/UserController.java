@@ -56,8 +56,7 @@ public class UserController {
 	public Product displayOneProductJson() {
 		return new Product(1, "laptop", 1000.99);
 		// URL: http://localhost:8080/user/6/one_product_as_json
-		// webpage: display one product in the array in json format
-		// {"id": 1, "name": "laptop", "price": 1000.99 }
+		// webpage: display one product in the array in json format {"id": 1, "name": "laptop", "price": 1000.99 }
 	}
 
 }
