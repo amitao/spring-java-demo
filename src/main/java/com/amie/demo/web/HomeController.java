@@ -17,9 +17,11 @@ public class HomeController {
 		return "index";
 	}
 	
+	// URL create is where data is submitted to
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	public String submitForm() {
-		return "";
+		// after form is submitted it redirects to dataResult.html in templates
+		return "dataResult";
 	}
 	
 	
