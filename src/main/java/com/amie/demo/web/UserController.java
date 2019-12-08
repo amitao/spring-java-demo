@@ -39,11 +39,25 @@ public class UserController {
 		// webpage displays a json list: [ "shoes", "laptop", "button"]
 	}
 	
+	// Getting array of products from DB
 	@RequestMapping("/{userId}/products_as_json")
 	public List<Product> displayProductsJson() {
-		return Arrays.asList(new Product(1, "laptop", 42.99),
-				new Product(2, "books", 42.99),
-				new Product(3, "bag", 42.99));
+		return Arrays.asList(new Product(1, "laptop", 1000.99),
+				new Product(2, "books", 20.99),
+				new Product(3, "bag", 35.99));
+		
+		// URL: http://localhost:8080/user/4/products_as_json
+		// webpage: displays array product in json
+		// [{"id": 1, "name": "laptop", "price": 1000.99 }, {"id": 2,"name": "books","price": 20.99},{"id": 3,"name": "bag","price": 35.99}]
+	}
+	
+	// Getting one product from DB
+	@RequestMapping("/{userId}/one_product_as_json")
+	public Product displayOneProductJson() {
+		return new Product(1, "laptop", 1000.99);
+		// URL: http://localhost:8080/user/6/one_product_as_json
+		// webpage: display one product in the array in json format
+		// {"id": 1, "name": "laptop", "price": 1000.99 }
 	}
 
 }
