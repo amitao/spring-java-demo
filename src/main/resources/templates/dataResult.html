@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Form Data Result</title>
@@ -7,6 +7,14 @@
 <body>
 
 <h1>The form has been submitted</h1>
+<p>show input data of user</p>
+
+<div>
+<p th:text="${user.fullName}"></p>
+<p th:text="${user.age}"></p>
+<p th:text="${user.employed}"></p>
+<p th:text="${user.gender}"></p>
+</div>
 
 </body>
 </html>

@@ -19,7 +19,8 @@ public class HomeController {
 	
 	// URL create is where data is submitted to
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
-	public String submitForm() {
+	// show form input data in html - add object parameters
+	public String submitForm(User user) {
 		// after form is submitted it redirects to dataResult.html in templates
 		return "dataResult";
 	}
